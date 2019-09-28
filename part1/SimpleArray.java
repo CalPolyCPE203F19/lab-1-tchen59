@@ -1,3 +1,4 @@
+import java.util.*;
 class SimpleArray
 {
    public static int [] squareAll(int values[])
@@ -6,7 +7,15 @@ class SimpleArray
          input array.  The length of an array is accessible through
          an array's length field (e.g., values.length).
       */
-      int [] newValues = new int[1];  // This allocates an array of integers.
+      int length = values.length;
+      int [] newValues = new int[length];  // This allocates an array of integers.
+      int num = 0;
+      for (int nums : values){
+        int squared = nums * nums;
+        newValues[num] = squared;
+        num++;
+
+            }
 
       /* TO DO: The output array, newValues, should hold as
          its elements the square of the corresponding element
